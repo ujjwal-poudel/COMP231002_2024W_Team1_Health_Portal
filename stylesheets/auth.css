@@ -1,0 +1,189 @@
+body  {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('post.jpg');
+    background-color: #FFFCE6;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    margin: 35px auto;
+}
+
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #F6F4ED;
+}
+
+/*------Sign in box design */
+.signin-box{
+    width: 300px;
+    padding: 20px;
+    margin: 100px, auto;
+    position: top;
+    border: 1px, solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgb(255, 255, 255);
+    background-color: #ffffff;
+}
+/*fix the text of placeholder and text in the buttons */
+.input label,
+.input input,
+.input-signup,
+.Email label,
+.signin-button,
+.singup-button
+.forgetpassword-button {
+    font-size: 14px; 
+}
+.signin-box h2{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input{
+    margin-bottom: 15px;
+}
+.input label{
+    display: block;
+    margin-bottom: 5px;
+}
+.input input{
+    width: 100%;
+    padding: 10px;
+    border: 1px ,solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.signin-button{
+    width: 100%;
+    padding: 10px;
+    background-color:#f05a03 ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+.additional-buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+.singup-button, .forgetpassword-button{
+    flex: 1;
+    padding: 10px;
+    background-color: #f05a03;
+    color:white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 14px;
+}
+button:hover{
+    background-color: #a04f03;
+}
+::placeholder {
+    color: rgb(8, 8, 8);
+    font-size: 20px;
+    opacity: 10%;
+}
+
+
+/*Sign up box*/
+.signup-box{
+    width: 300px;
+    padding: 25px;
+    margin: 150px, auto;
+    position: top;
+    border: 1px, solid #ffffff;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.input-signup{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.signup-box h2{
+    text-align: center;
+}
+.input-signup label {
+    display: block;
+    margin-bottom: 5px; 
+    font-size: 16px; 
+    font-family: 'Playfair Display', serif; 
+    color: #333; 
+}
+.input-signup input {
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    padding: 10px; 
+    font-size: 16px;
+}
+
+.input-signup input:focus {
+    outline: none;
+    border: 2px solid #666;
+}
+.input-signup label{
+  font-family: Arial, sans-serif;
+  color: #333;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.Email label{
+    display: block;
+    margin-bottom: 5px; 
+    font-size: 16px; 
+}
+.Email input[type="email"]{
+    width: 100%; 
+    box-sizing: border-box; 
+    border: 2px solid #ccc; 
+    border-radius: 4px;
+    padding: 10px; 
+    font-size: 16px;
+}
+.Email[type=email]:focus{
+    outline: none;
+    border: 2px solid   #666;
+}
+.Email label{
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+
+
+.singup-button-page2{
+    width: 100%;
+    padding: 10px;
+    background-color:#f05a03 ;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    align-items: center;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+

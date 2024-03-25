@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width , initial-scale=1.0" />
+	<link rel="stylesheet" href="auth.css" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+	
+	<title>Travel App</title>
+</head>
+
+<body1>
+	<div class = "signup-box">
+		<form action="/signup" method="post">
+			<h2>Sign up</h2>
+			
+			<div class="input-signup">
+				<label for="fname">First Name</label>
+				<input type="text" id = "fname" name="fname" autocomplete="given-name" required>
+			</div>
+			
+			<div class="input-signup">
+				<label for="lname">Last Name</label>
+				<input type="text" id = "lname" name="lname" autocomplete="family-name" required>
+			</div>
+		
+			<div class="input-signup">
+				<label for="email">Email</label>
+				<input type="email" id="Email" name="email"   autocomplete="email" required>
+			</div>
+			
+			<div class="input-signup">
+				<label for="passw">Password</label>
+				<input type="password" id="passw" name="password" autocomplete="new-password" required onkeyup="validate_password()">
+			</div>
+			
+			<div class="input-signup">
+				<label for="passwcheck">Confirm Password</label>
+				<input type="password" id="passwcheck" name="passwcheck" required onkeyup="validate_password()">
+			</div>
+			<div id="wrong_pass_alert"></div>
+			<button type ="submit" class="singup-button-page2" id="signupButton" onclick="messageFunction()">Sign up</button>
+			
+			</div>
+			<script>
+				 document.getElementById("signupButton").addEventListener("click", function(event){
+        event.preventDefault(); 
+        var emailInput = document.getElementById("Email");
+        var passInput = document.getElementById("passw");
+        var passCheckInput = document.getElementById("passwcheck");
+
+        if (emailInput.checkValidity() && passInput.value === passCheckInput.value) {
+            fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    email: emailInput.value,
+                    password: passInput.value
+                }),
+            })
+            .then(response => {
+                if(response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Signup failed');
+                }
+            })
+            .then(data => {
+                console.log('Success:', data);
+                window.location.href = '/signin'; 
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert("Signup failed: " + error.message);
+            });
+        } else {
+            emailInput.reportValidity();
+            passInput.reportValidity();
+            passCheckInput.reportValidity();
+        }
+    });
+				document.getElementById("signInButton").addEventListener("click", function(){
+				var EmailInput = document.getElementById("Email").value;
+				if(EmailInput.checkValidity()) {
+					window.location.href='/';
+				}else{
+					EmailInput.reportValidity();
+				}
+				});
+				function validate_password() {
+				var passw = document.getElementById('passw').value;
+				var passwcheck = document.getElementById('passwcheck').value;
+				if (passw != passwcheck) {
+					document.getElementById('wrong_pass_alert').style.color = 'red';
+					document.getElementById('wrong_pass_alert').innerHTML = '☒ Passwords do not match';
+					document.getElementById('signupButton').disabled = true;
+					document.getElementById('signupButton').style.opacity = (0.4);
+				} else {
+					document.getElementById('wrong_pass_alert').style.color = 'green';
+					document.getElementById('wrong_pass_alert').innerHTML = '🗹 Passwords match';
+					document.getElementById('signupButton').disabled = false;
+					document.getElementById('signupButton').style.opacity = (1);
+				}
+			}
+
+				function wrong_pass_alert() {
+				if (document.getElementById('passw').value != "" &&
+					document.getElementById('passwcheck').value != "") {
+					alert("Your response is submitted");
+				} else {
+					alert("Please fill all the fields");
+				}
+				}
+				
+			</script>
+			
+		</form>
+
+		
+	</div>	
+</body1>
+
+</html>  
