@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width" />
+	<link rel="stylesheet" href="auth.css" />
+	<link href='https://fonts.googleapis.com/css?family=Playfair Display' rel='stylesheet'>
+	
+	<title>Travel App</title>
+</head>
+
+<body>
+	<div class = "signin-box">
+		<form action="/login" method="post">
+			<h2>Sign in</h2>
+			
+			<div class=input>
+				<label for="email">Email</label>
+				<input type="email" name="email" placeholder="exaple@gmail.com" id="email" required>
+			</div>
+			<div class="input">
+				<label for="password">Password</label>
+				<input type="password" id="password" name="password" required>
+			</div>
+			<button type="submit" class="signin-button" id="SignInButton" ; >Sign in</button>
+			<script>
+				document.getElementById("SignInButton").addEventListener("click", function(){
+				var EmailInput = document.getElementById("email").value;
+				if(EmailInput.checkValidity()) {
+					window.location.href='/';
+				}else{
+					EmailInput.reportValidity();
+				}
+				});
+			</script>
+			<div class="additional-buttons">
+			<button type ="submit" class="singup-button" onclick="location.href='/signup';">Sign up</button>
+			</div>
+		</form>
+
+
+	</div>	
+</body>
+
+</html>  
