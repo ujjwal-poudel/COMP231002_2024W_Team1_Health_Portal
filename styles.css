@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navigation ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.copyright {
+    font-size: 14px;
+}
+
+
+/* Cards */
+.posts{
+    padding: 101px 0;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    width: 98%;
+    margin: auto auto;
+}
+.card{
+    width: 20rem;
+    height: 26rem;
+    background: #fff;
+    border-radius: 1.5rem;
+    padding: 1.5rem;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #333;
+  }
+  
+  .card-img-holder{
+    width: 100%;
+    height: 11rem;
+    position: relative;
+  }
+  
+  .card-img-holder img{
+    width: 100%;
+    height: 12rem;
+    max-height: 15rem;
+    object-fit: cover;
+    border-radius: 1.5rem;
+  }
+  
+  .blog-title{
+    color: #22215B;
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+  
+  .description{
+    color: #22215B80;
+    font-size: 1rem;
+  }
+  
+  .blog-time{
+    font-size: .8rem;
+    color: #22215B;
+  }
+  
+  .options{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+  }
+  
+  .options span{
+    font-weight: 600;
+    color: #22215B;
+  }
+  
+  .btn{
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    border-radius: .5rem;
+    font-weight: 400;
+    background: #EEF7FE;
+    color: #22215B;
+    cursor: pointer;
+  }
