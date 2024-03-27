@@ -1,0 +1,89 @@
+
+
+.search-bar input[type="text"] {
+    padding: 8px;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-bar button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.logout a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* CSS for login and signup boxes */
+.signin-box, .signup-box {
+    width: 300px;
+    padding: 20px;
+    margin: 100px auto; /* Adjust margin to center */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center align content */
+}
+
+.signin-box h2, .signup-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.input, .input-signup, .Email {
+    margin-bottom: 15px;
+}
+
+.input label, .Email label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+}
+
+.input input, .input-signup input, .Email input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.signin-button, .signup-button, .forgetpassword-button, .singup-button-page2 {
+    width: 100%;
+    padding: 10px;
+    background-color: #f05a03;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.additional-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+button:hover {
+    background-color: #a04f03;
+}
+
+::placeholder {
+    color: rgb(8, 8, 8);
+    font-size: 20px;
+    opacity: 10%;
+}

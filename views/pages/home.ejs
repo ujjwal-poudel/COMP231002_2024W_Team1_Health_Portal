@@ -1,25 +1,19 @@
-<body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="Images/logo.jpg" alt="Team Logo" />
-                <h1>Health portal</h1>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/"><i class="fas fa-home">&nbsp;</i> Home</a></li>
-                    <li><a href="/search"><i class="fas fa-home">&nbsp;</i> search</a></li>
-                    
-                    <% if (user) { %>
-                      <li class="user-welcome">Welcome, <%= user.email %></li>
-                      <li><a href="/logout"><i class="fas fa-sign-out-alt">&nbsp;</i> Log out</a></li>
-                      
-                    <% } else { %>
-                      <li><a href="/login"><i class="fas fa-sign-in-alt">&nbsp;</i> Log in</a></li>
-                      <li><a href="/signup" class="btn"><i class="fas fa-user-plus">&nbsp;</i> Sign up</a></li>
-                    <% } %>
-                </ul>
-            </nav>
-        </div>
-    </header>
-</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Insight</title>
+    <link rel="stylesheet" href="styles.css" />
+    <%- include("../partials/header.ejs"); %>
+  </head>
+  <body>
+    
+
+    <footer>
+      <div class="copyright">
+        &copy; 2024 Health Insight. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
